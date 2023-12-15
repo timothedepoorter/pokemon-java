@@ -1,5 +1,8 @@
 package fr.pokemon.arene;
 
+import fr.pokemon.dresseur.Dresseur;
+import fr.pokemon.pokeball.Pokeball;
+
 public class Arene {
     private String nom;
 
@@ -11,7 +14,8 @@ public class Arene {
         return nom;
     }
 
-    public Dresseur duel(Dresser dresser1,Dresser dresser2){
+    public Dresseur duel(Dresseur dresser1, Dresseur dresser2){
+
         return null;
     }
 
