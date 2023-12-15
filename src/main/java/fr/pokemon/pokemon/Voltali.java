@@ -10,6 +10,5 @@ public class Voltali extends Pokemon implements FatalFoudre {
 
     @Override
     public void fatalFoudre(int degatMin, int degatMax, Pokemon pokemon) {
-
     }
 }
