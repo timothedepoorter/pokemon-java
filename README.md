@@ -18,21 +18,11 @@ abstract class Pokemon {
   +attaqueNormale()
 }
 
-interface Type {
+class Type {
+  -nomType: str
+  +getNomType()
   +getFortContre()
   +getFaibleContre()
-}
-class TypeFeu implements Type {
-  -fortContre: str
-  -faibleContre:str
-}
-class TypeEau implements Type {
-  -fortContre: str
-  -faibleContre: str
-}
-class TypeElectric implements Type {
-  -fortContre: str
-  -faibleContre: str
 }
 
 interface LanceFlamme {
@@ -46,6 +36,10 @@ interface PistoletAEau {
 interface FatalFoudre {
   +fatalFoudre(int degatMin, int degatMax, Pokemon pokemon)
 }
+
+interface Charge {
+    +charge(int degatMin, int degatMax, Pokemon pokemon)
+} 
 
 class Pokeball  {
   -nom: str
@@ -65,8 +59,8 @@ class Dresseur {
 class Aquali extends Pokemon implements PistoletAEau {
   
 }
-
 class Pyroli extends Pokemon implements LanceFlamme {
+
   
 }
 
