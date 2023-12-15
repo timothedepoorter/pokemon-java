@@ -22,4 +22,6 @@ public class Pokeball {
     public Pokemon getPokemon() {
         return pokemon;
     }
+
+
 }

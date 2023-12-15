@@ -30,4 +30,16 @@ public abstract class Pokemon {
     public void setPointVie(int pointVie) {
         this.pointVie = pointVie;
     }
+
+    /**
+     * verifie si le pokemon et en vie en verrifiant le nombre de point de vie
+     * renvois true si il est en vie et false si il est mort
+     * @return Boolean
+     */
+    public boolean estEnVie(){
+        if(this.pointVie > 0){
+            return true;
+        }
+        return false;
+    }
 }

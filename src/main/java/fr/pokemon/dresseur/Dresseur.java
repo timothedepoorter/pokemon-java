@@ -15,6 +15,7 @@ public class Dresseur {
         this.lesPokeballs = new ArrayList<Pokeball>();
     }
 
+
     public String getNom() {
         return nom;
     }
@@ -34,6 +35,27 @@ public class Dresseur {
            throw new Exception("Impossible nombre maximale de Pokeball attiend");
         }
         lesPokeballs.add(unePokeball);
+    }
+
+    /**
+     * Verrifie si le dresseur a toujours des pokemon en vie pour combatre;
+     * Revois False si il n'y a pu de pokemon en vie et true si il y a des pokemons en vie
+     * @return boolean
+     */
+    public boolean pokemonEnVie(){
+        int nombrePokeball = this.lesPokeballs.size();
+        int nombreDePokemonEnVie = 0;
+
+        for (Pokeball unePokeball : this.lesPokeballs){
+            if(unePokeball.getPokemon().estEnVie()){
+                nombreDePokemonEnVie ++;
+            }
+        }
+
+        if (nombreDePokemonEnVie>0){
+            return true;
+        }
+        return false;
     }
 
 
