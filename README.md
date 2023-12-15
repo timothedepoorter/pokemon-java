@@ -37,6 +37,10 @@ interface FatalFoudre {
   +fatalFoudre(int degatMin, int degatMax, Pokemon pokemon)
 }
 
+interface Charge {
+    +charge(int degatMin, int degatMax, Pokemon pokemon)
+} 
+
 class Pokeball  {
   -nom: str
   -pokemon: Pokemon
