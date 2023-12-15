@@ -5,6 +5,7 @@
 ```plantuml
 
 @startuml
+!theme toy
 
 title Combat Pokemon
 
@@ -25,6 +26,7 @@ class Type {
   +getFaibleContre()
 }
 
+
 interface LanceFlamme {
   +lanceFlamme(int degatMin, int degatMax, Pokemon pokemon)
 }
@@ -37,10 +39,6 @@ interface FatalFoudre {
   +fatalFoudre(int degatMin, int degatMax, Pokemon pokemon)
 }
 
-interface Charge {
-    +charge(int degatMin, int degatMax, Pokemon pokemon)
-} 
-
 class Pokeball  {
   -nom: str
   -pokemon: Pokemon
@@ -50,18 +48,20 @@ class Pokeball  {
 
 class Dresseur {
   -nom: str
-  -pokeball: List<Pokeball>
+  -pokeball: ArrayList<Pokeball>
   +getNom()
   +getPokeball()
 }
 
 
 class Aquali extends Pokemon implements PistoletAEau {
-  
+
+
 }
+
 class Pyroli extends Pokemon implements LanceFlamme {
 
-  
+
 }
 
 class Voltali extends Pokemon implements FatalFoudre {
@@ -70,10 +70,14 @@ class Voltali extends Pokemon implements FatalFoudre {
 
 
 class Arene  {
-  -nom: str
-  getDuel(dresseur1 Dresseur, dresseur2 Dresseur)
+  -nomArene : str
+  +getNomArene() : str
+  +duel(dresseur1 : Dresseur, dresseur2, Dresseur) Dresseur
 }
 
+Pokeball -- Pokemon
+Pokemon -- Type
+Dresseur -- Pokemon
 
 
 @enduml
