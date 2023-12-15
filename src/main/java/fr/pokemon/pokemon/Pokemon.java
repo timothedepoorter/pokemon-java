@@ -1,12 +1,14 @@
 package fr.pokemon.pokemon;
 
+import fr.pokemon.type.Type;
+
 public abstract class Pokemon {
     protected String nom;
-    protected String typePokemon; //Changer le type
+    protected Type typePokemon; //Changer le type
     protected int pointVie;
 
 
-    public Pokemon(String nom, String typePokemon, int pointVie) {
+    public Pokemon(String nom, Type typePokemon, int pointVie) {
         this.nom = nom;
         this.typePokemon = typePokemon;
         this.pointVie = pointVie;
@@ -16,17 +18,10 @@ public abstract class Pokemon {
         return nom;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getTypePokemon() {
+    public Type getTypePokemon() {
         return typePokemon;
     }
 
-    public void setTypePokemon(String typePokemon) {
-        this.typePokemon = typePokemon;
-    }
 
     public int getPointVie() {
         return pointVie;
