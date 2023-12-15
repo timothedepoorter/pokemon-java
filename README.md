@@ -18,21 +18,10 @@ abstract class Pokemon {
   +attaqueNormale()
 }
 
-interface Type {
+class Type {
+  -nomType: str
   +getFortContre()
   +getFaibleContre()
-}
-class TypeFeu implements Type {
-  -fortContre: str
-  -faibleContre:str
-}
-class TypeEau implements Type {
-  -fortContre: str
-  -faibleContre: str
-}
-class TypeElectric implements Type {
-  -fortContre: str
-  -faibleContre: str
 }
 
 interface LanceFlamme {
@@ -65,8 +54,8 @@ class Dresseur {
 class Aquali extends Pokemon implements PistoletAEau {
   
 }
-
 class Pyroli extends Pokemon implements LanceFlamme {
+
   
 }
 
