@@ -20,7 +20,7 @@ abstract class Pokemon {
 
 class Type {
   -nomType: str
-  +getNom()
+  +getNomType()
   +getFortContre()
   +getFaibleContre()
 }
